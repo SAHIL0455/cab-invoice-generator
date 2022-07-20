@@ -25,10 +25,15 @@ public class InvoiceGeneratorTest {
         double actualResult = invoiceGenerator.calculateMultiplyFare(multiplyRides);
         Assert.assertEquals(132.0, actualResult, 0.0);
 
-        double actualResult1 = invoiceGenerator.TotalRide;
+        double actualResult1 = invoiceGenerator.Total_Ride;
         Assert.assertEquals(2, actualResult1, 0.0);
 
-        double actualResult2 = invoiceGenerator.TotalAverageFare;
+        double actualResult2 = invoiceGenerator.Total_Average_Fare;
         Assert.assertEquals(66, actualResult2, 0.0);
+    }
+    @Test
+    public void givenDistanceAndTime_shouldReturnTotalFarePremium(){
+        double preminum = invoiceGenerator.calculateFarePreminum(10, 30);
+        Assert.assertEquals(210,preminum,0.0);
     }
 }

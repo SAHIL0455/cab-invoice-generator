@@ -1,11 +1,12 @@
 package com.brigdelabz;
+import lombok.*;
 
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class Ride {
-    int distance;
-    int time;
-
-    public Ride(int distance, int time) {
-        this.distance = distance;
-        this.time = time;
-    }
+    double distance;
+    double time;
 }
